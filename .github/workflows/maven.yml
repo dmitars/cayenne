@@ -24,6 +24,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}-build-v1
           restore-keys: ${{ runner.os }}-maven
 
+      - name: Install snapshots
+        run: mvn install
       - name: Build and test...
         run: | 
           mvn clean install -DskipTests
