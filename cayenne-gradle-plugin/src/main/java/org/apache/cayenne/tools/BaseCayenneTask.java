@@ -48,6 +48,10 @@ public class BaseCayenneTask extends DefaultTask {
         this.mapFileName = mapFileName;
     }
 
+    public String getMapFileName() {
+        return mapFileName;
+    }
+
     public void map(String mapFileName) {
         setMap(mapFileName);
     }
@@ -55,6 +59,7 @@ public class BaseCayenneTask extends DefaultTask {
     public void map(File mapFile) {
         setMap(mapFile);
     }
+
 
     @Internal
     public File getDataMapFile() {
